@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAWKEYE MEDIA</title>
+
+  <!-- Bootstrap CDN  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+  <!-- Owl-carousel CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+</head>
+
+
+<body></body>
+  <!-- Header Section -->
+  <header id="header">
+    <nav>
+      <img class="logo" src="data:image/png;base64,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" height="115" width="200"/>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+      <ul>
+          <li><a href="index.html">PORTFOLIO</a></li>
+          <li><a href="profile.html">PHOTOGRAPHY</a></li>
+          <li><a href="movies.html">VIDEOGRAPHY</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+  </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images4.alphacoders.com/107/1074479.jpg" class="d-block w-100" alt="banner1">
+          <div class="carousel-caption">
+            <h1>BUILD A BETTER WORLD</h1>
+            <p>Lorem lpsum is simply dummy text of the printing and typesetting<br>industry.Lorem lpsum has been the industry's standard</p>
+            <button>READ MORE</button>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.teahub.io/photos/full/178-1781216_beautiful-view-of-the-sunset-tree-sky-cloud.jpg" class="d-block w-100" alt="banner2">
+          <div class="carousel-caption">
+            <h1>BUILD A BETTER WORLD</h1>
+            <p>Lorem lpsum is simply dummy text of the printing and typesetting<br>industry.Lorem lpsum has been the industry's standard</p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://images7.alphacoders.com/833/833767.jpg" class="d-block w-100" alt="banner3">
+          <div class="carousel-caption">
+            <h1>BUILD A BETTER WORLD</h1>
+            <p>Lorem lpsum is simply dummy text of the printing and typesetting<br>industry.Lorem lpsum has been the industry's standard</p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://wallpapercave.com/wp/wp2471726.jpg" class="d-block w-100" alt="banner4">
+          <div class="carousel-caption">
+            <h1>BUILD A BETTER WORLD</h1>
+            <p>Lorem lpsum is simply dummy text of the printing and typesetting<br>industry.Lorem lpsum has been the industry's standard</p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://wallpapershome.com/images/pages/ico_h/23277.jpg" class="d-block w-100" alt="banner5">
+          <div class="carousel-caption">
+            <h1>BUILD A BETTER WORLD</h1>
+            <p>Lorem lpsum is simply dummy text of the printing and typesetting<br>industry.Lorem lpsum has been the industry's standard</p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/originals/48/75/75/487575e6ea4901ca523a2ae350fab78d.jpg" class="d-block w-100" alt="banner6">
+          <div class="carousel-caption">
+            <h1>BUILD A BETTER WORLD</h1>
+            <p>Lorem lpsum is simply dummy text of the printing and typesetting<br>industry.Lorem lpsum has been the industry's standard</p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <SECTION>
+    <div class="t">
+    <!-- Home section -->
+    <div class="photo">
+     <img src="https://static-cse.canva.com/blob/562144/DronePhotography2.jpg" alt="" width="550" height="545" Align="left"/>&nbsp;
+    </div>
+     <h4>&boxh;&boxh;THE EXPERINCE OF</h4>
+    <h2>&nbsp;BIRDS EYE VIEW &nbsp;<br>LIKE NEVER BEFORE</h2>
+    <div class="call">
+      <button>CALL NOW</button>
+    </div>
+      </div>
+    </section>
+    <!-- Video Lecture Section -->
+    <section id="video_projects">
+      <div class="container-fluid py-5" style="background: #82589F;">
+        <div class="row">
+          <div class="col-md-12 col-11 mx-auto">
+            <h1 class="heading" style="color: #fff;">Video Projects</h1>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme mt-5">
+          <div class="item">
+            <div class="video" style="margin: 0 3rem !important;">
+              <video width="430" height="240" controls>
+                <source src="https://media.istockphoto.com/videos/play-icon-like-on-player-video-id1212476803?s=640x640" type="video/mp4">
+              </video>
+              <div class="caption d-flex justify-content-between text-white">
+                <p allign="center">REAL ESTATE</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="video" style="margin: 0 3rem !important;">
+              <video width="430" height="240" controls>
+                <source src="" type="video/mp4">
+              </video>
+              <div class="caption d-flex justify-content-between text-white">
+                <p>EVENTS</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="video" style="margin: 0 3rem !important;">
+              <video width="430" height="240" controls>
+                <source src="" type="video/mp4">
+              </video>
+              <div class="caption d-flex justify-content-between text-white">
+                <p allign="center">HOSPITALITY</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Zippy Team Section -->
+    <section id="team ">
+      <div style="background-image: url('https://images.unsplash.com/photo-1576628490586-b4e46bdcd7a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');background-repeat: no-repeat; 
+      background-size: cover;">
+
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-8 col-11 mx-auto">
+            <h1 class="heading">AT HALK<p style="font-size:20px;",style="color:yellow;">WE DO___</p></h1>
+            <div class="row mt-5">
+              <div class="col-md-4 col-11 mx-auto text-center card_container">
+                <img src="https://i.pinimg.com/originals/6e/e7/df/6ee7df52d4975833fcfdc426cd0af921.jpg" alt="1" class="img-fluid image">
+                <div class="social_icons">
+                </div>
+                <h5>Aerial Photography</h5>
+                
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center card_container">
+                <img src="https://images.squarespace-cdn.com/content/v1/5b96f575372b962e951b3b0d/1618957989029-LX8ND65RPGRZSPY2293U/video-icon.jpg" alt="2" class="img-fluid image">
+                <div class="social_icons">
+                </div>
+                <h5>Corporate Videos</h5>
+                
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center card_container">
+                <img src="https://cdn4.vectorstock.com/i/1000x1000/91/63/video-promotion-icon-simple-element-vector-27079163.jpg" alt="3" class="img-fluid image">
+                <div class="social_icons">
+                </div>
+                <h5>Promotional Videos</h5>
+                
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center card_container">
+                <img src="https://i.pinimg.com/originals/6e/e7/df/6ee7df52d4975833fcfdc426cd0af921.jpg" alt="4" class="img-fluid image">
+                <div class="social_icons">
+                </div>
+                <h5>Aerial Survieliance</h5>
+                
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center card_container">
+                <img src="https://image.shutterstock.com/image-vector/calendar-checkmark-vector-icon-260nw-707670694.jpg" alt="5" class="img-fluid image">
+                <div class="social_icons">
+                </div>
+                <h5>Events</h5>
+                
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center card_container">
+                <img src="https://image.shutterstock.com/image-vector/photo-drone-icon-logo-design-260nw-691207849.jpg" alt="6" class="img-fluid image">
+                <div class="social_icons">
+                </div>
+                <h5>Aerial Photography</h5>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="blog">
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-8 col-11 mx-auto">
+            
+            <div class="row mt-5">
+              <div class="col-md-4 col-11 mx-auto text-center mt-3">
+                <img src="https://image.shutterstock.com/image-photo/image-cheerful-african-american-woman-260nw-1718299927.jpg" alt="Member1" class="img-fluid image">
+               <h3>PROJECT 1</h3>
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center mt-3">
+                <img src="https://www.freedigitalphotos.net/images/category-images/201.jpg" alt="Member1" class="img-fluid image">
+              <h3>PROJECT 2</h3>
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center mt-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnUtxuW7QnBzEf-kRoWMAz78y9e4IRsSm4-PghoFn3aL6gVcSXgor6TnrY2N9YjA9iP2Y&usqp=CAU" alt="Member1" class="img-fluid image">
+                <h3>PROJECT 3</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="blog">
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-8 col-11 mx-auto">
+            
+            <div class="row mt-5">
+              <div class="col-md-4 col-11 mx-auto text-center mt-3">
+                <img src="https://image.shutterstock.com/image-photo/image-cheerful-african-american-woman-260nw-1718299927.jpg" alt="Member1" class="img-fluid image">
+                <h3>PROJECT 4</h3>
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center mt-3">
+                <img src="https://www.freedigitalphotos.net/images/category-images/201.jpg" alt="Member1" class="img-fluid image">
+                <h3>PROJECT 5</h3>
+              </div>
+              <div class="col-md-4 col-11 mx-auto text-center mt-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnUtxuW7QnBzEf-kRoWMAz78y9e4IRsSm4-PghoFn3aL6gVcSXgor6TnrY2N9YjA9iP2Y&usqp=CAU" alt="Member1" class="img-fluid image">
+                <h3>PROJECT 6</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="class">
+      <div style="background-image: url('https://dronerush.com/wp-content/uploads/2017/11/Hubsan-DJI-Parrot-Mavic-Spark-H502-drones-1024x576.jpg');background-repeat: no-repeat; 
+      background-size: cover;">
+        <h3>BUILD A BETTER WORLD</h3>
+      </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container-fluid py-5">
+        <div class="row">
+          <div class="col-md-12 col-12 mx-auto">
+            <div class="row">
+              <div class="col-md-6 col-12 mx-auto">
+                <div class="mapouter">
+                  <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+                      marginheight="0" marginwidth="0"
+                      src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Uttar Pradesh&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                      href="https://www.fridaynightfunkin.net/friday-night-funkin-mods-fnf-play-online/">Friday Night
+                      Funkin Mods</a></div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 mx-auto contact_form p-3">
+                <h1 class="heading">WORK WITH US!</h1>
+                <form>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="email" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject">
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" cols="30" rows="10"></textarea>
+                  </div>
+                  <button>Submit</button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section id="footer" style="background: #994ea8;">
+      <div class="container py-5">
+        <div class="row">
+         <div class="col-md-10 col-11 mx-auto">
+           <div class="row text-center">
+            <div class="col-md-4 col-11">
+              <h5>Office Address</h5>
+              <ul>
+                <li>lorem ipsum dolor, 234</li>
+                <li>234 120 consectetur</li>
+                <li>adipisicing </li>
+              </ul>
+            </div>
+            <div class="col-md-4 col-11">
+              <h5>Follow US</h5>
+              <ul>
+                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a><br>
+                <a href="#"><i class="fa fa-flickr"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </ul>
+            </div>
+            <div class="col-md-4 col-11">
+              <h5>Contact US</h5>
+              <ul>
+                <li>+91-99 9999 9999</li>
+                <li>Lorem lpsum lis is a dummy text<br>using for printing purpose</li>
+                <li>contact@hawkeyemedia.com</li>
+              </ul>
+            </div>
+           </div>
+         </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!-- Bootstrap CDN  -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Custom Js -->
+  <script src="indexsheet.js"></script>
+</body>
+
+</html>
